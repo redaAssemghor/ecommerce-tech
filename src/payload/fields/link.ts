@@ -1,6 +1,7 @@
 import type { Field } from 'payload/types'
 
 import deepMerge from '../utilities/deepMerge'
+import Icon from './richText/label/Icon'
 
 export const appearanceOptions = {
   primary: {
@@ -115,6 +116,12 @@ const link: LinkType = ({ appearances, disableLabel = false, overrides = {} } = 
           admin: {
             width: '50%',
           },
+        },
+        {
+          name: 'icon',
+          label: Icon,
+          type: 'upload',
+          relationTo: 'media',
         },
       ],
     })
